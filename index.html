@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+    html {
+        background-color: #6400FF;
+        background-image: linear-gradient(to right, #6400FF , #AA76FA);
+    }
+    .container {
+        width: min(90% - 20px, 1200px);
+        margin-inline: auto;
+    }
+    .swiper-container {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: 150px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+    .swiper-new-button-next {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        z-index: 2;
+        cursor: url('next.png'), auto;
+    }
+    .swiper-new-button-prev {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        z-index: 2;
+        cursor: url('prev.png'), auto;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+              <div class="swiper-slide">Slide 10</div>
+            </div>
+            <div class="swiper-new-button-next"></div>
+            <div class="swiper-new-button-prev"></div>
+            <!-- Add Pagination -->
+          </div>
+    </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-new-button-next',
+        prevEl: '.swiper-new-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
