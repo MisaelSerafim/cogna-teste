@@ -3,84 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <style>
     body {
       margin: 0;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
     }
     html {
         background-color: #6400FF;
         background-image: linear-gradient(to right, #6400FF , #AA76FA);
+        box-sizing: border-box;
+    }
+    h1{
+      font-size: 72px;
+      color: #fff;
+      line-height: 120%;
+      margin-bottom: 0;
     }
     .container {
-        width: min(90% - 20px, 1200px);
-        margin-inline: auto;
+      width: min(90% - 20px, 1200px);
+      margin-inline: auto;
     }
     .swiper-container {
       width: 100%;
     }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      height: 150px;
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    }
     .swiper-new-button-next {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 40%;
-        height: 100%;
-        z-index: 2;
-        cursor: url('next.png'), auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      z-index: 2;
+      cursor: url('next.png'), auto;
     }
     .swiper-new-button-prev {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 40%;
-        height: 100%;
-        z-index: 2;
-        cursor: url('prev.png'), auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      z-index: 2;
+      cursor: url('prev.png'), auto;
+    }
+    nav button {
+      border: 2px solid #fff;
+      background: transparent;
+      border-radius: 25px;
+      height: 48px;
+      padding: 0 21px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .conteudo-card span.high {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .card {
+      display: flex;
+      gap: 15px;
+    }
+    .card img {
+      width: 130px;
+      height: 140px;
+      object-fit: cover;
+      object-position: center;
+    }
+    .conteudo-card h3 {
+      font-size: 24px;
+      color: #fff;
+      line-height: 32px;
+      margin: 0;
+      font-weight: 600;
+    }
+    .container nav {
+      position: relative;
+      z-index: 99;
+      padding: 60px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      max-width: 655px;
+    }
+    .container nav button:hover,
+    .container nav button.active{
+      background: #230059;
+      color: #fff;
+      border-color: #230059;
+    }
+    button.plus {
+      background: #fff;
+      color: #6705ff;
+      font-weight: bold;
+      border: none;
+      font-size: 30px;
     }
   </style>
 </head>
 <body>
     <div class="container">
+        <h1>Nossos destaques</h1>
+        <nav>
+          <button>2024</button>
+          <button class="active">2023</button>
+          <button>2022</button>
+          <button>2021</button>
+          <button>2020</button>
+          <button class="plus">+</button>
+        </nav>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
-              <div class="swiper-slide">Slide 10</div>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="card">
+                    <img src="img-teste.png" alt="teste">
+                    <div class="conteudo-card">
+                      <span class="high">Cogna</span>
+                      <h3>ìndice de sustentabilidade empresarial</h3>
+                    </div>
+                  </div>
+                </div>
             </div>
             <div class="swiper-new-button-next"></div>
             <div class="swiper-new-button-prev"></div>
             <!-- Add Pagination -->
           </div>
-    </div>
+    </>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 30,
       navigation: {
         nextEl: '.swiper-new-button-next',
